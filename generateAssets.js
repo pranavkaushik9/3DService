@@ -3,7 +3,7 @@ const faker = require('faker');
 module.exports = (threshold, users) => {
     const assets = [];
     for (let i = 1; i<= threshold; i++) {
-        const random = Math.floor(Math.random() * users.length - 1);
+        const random = Math.floor(Math.random() * (users.length - 1));
         assets.push({
             id: i,
             name: faker.commerce.productName(),
